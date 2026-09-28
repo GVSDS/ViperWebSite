@@ -71,6 +71,11 @@ npm run build    # vue-tsc -b 类型检查 + vite build → dist/
 - **滚动**：Lenis 接管纵向滚动（`lerp: 0.08`、`anchors.offset: -76`）；横向裁剪放在根元素 `html` 上（`overflow-x: clip`），放 `body` 会被 Lenis 的 `allowNestedScroll` 误判为嵌套滚动源
 - **动效三条**：首屏巨字随滚动飞入「为什么是 Viper」标题槽位；Features 卡片鼠标跟随光晕；跨 section 背景渐变衔接（下一 section 顶部留透明区让上一区柔光透出）
 
+## 相关仓库
+
+- [VenomWebSite](https://git.gvsds.com/GVSDS/VenomWebSite) — Venom 包管理器官网（venom.gvsds.com）
+- [GVSite](https://git.gvsds.com/GVSDS/GVSite) — GVSDS 工作室官网
+
 ## 浏览器兼容
 
 - `overflow: clip` 前置 `overflow-x: hidden` 回退（老 iOS Safari < 16 / Chrome < 90 会丢弃 `clip`）
