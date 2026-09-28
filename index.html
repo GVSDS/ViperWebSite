@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Viper — Python 语法，LLVM 语义：一门编译为原生机器码的系统级编程语言。Python syntax, LLVM semantics: a system-level language that compiles to native machine code.">
+  <meta name="theme-color" content="#ffffff">
+  <title>Viper · Python 语法，LLVM 语义</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <script>
+    // 首屏渲染前写入主题，避免"先画浅色再切暗色"的闪白。
+    // 优先级：localStorage 里的手动选择 > 系统偏好。
+    (function () {
+      var meta = document.querySelector('meta[name="theme-color"]')
+      try {
+        var saved = localStorage.getItem('viper-theme')
+        var theme = saved === 'light' || saved === 'dark'
+          ? saved
+          : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
+        document.documentElement.setAttribute('data-theme', theme)
+        if (meta) meta.setAttribute('content', theme === 'dark' ? '#0c1512' : '#ffffff')
+      } catch (e) {
+        document.documentElement.setAttribute('data-theme', 'light')
+      }
+    })()
+  </script>
+</head>
+<body>
+  <div id="app"></div>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
